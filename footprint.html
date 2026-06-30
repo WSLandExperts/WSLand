@@ -1,57 +1,114 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Footprint — WS Land</title>
-<meta name="description" content="Our investment footprint across the United States.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
-</head><body>
-<header class="nav"><div class="wrap nav-inner">
-<a href="index.html" class="brand"><span class="mk"></span>WS Land</a>
-<nav class="nav-links">
-<a href="index.html">Home</a>
-<a href="approach.html">Approach</a>
-<a href="footprint.html" class="active">Footprint</a>
-<a href="firm.html">The Firm</a>
-<a href="contact.html" class="nav-cta">Get in touch</a>
-</nav>
-<button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
-</div></header>
+<meta name="description" content="WS Land's investment footprint across five U.S. regions — West, Mountain West, Midwest, South, and Northeast.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style-v2.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<header class="nav scrolled">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand"><span class="mk"></span>WS Land</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="approach.html">Approach</a>
+      <a href="footprint.html" class="active">Footprint</a>
+      <a href="firm.html">The Firm</a>
+      <a href="contact.html" class="nav-cta">Get in touch</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
 <div class="mobile-menu" id="mobileMenu">
-<a href="index.html">Home</a><a href="approach.html">Approach</a><a href="footprint.html">Footprint</a><a href="firm.html">The Firm</a><a href="contact.html">Get in touch</a>
+  <a href="index.html">Home</a>
+  <a href="approach.html">Approach</a>
+  <a href="footprint.html">Footprint</a>
+  <a href="firm.html">The Firm</a>
+  <a href="contact.html">Get in touch</a>
 </div>
 
-<section class="wrap page-head">
-  <span class="kicker">02 — Where We Work</span>
+<section class="page-hero wrap">
+  <div class="page-kicker">02 — Where We Work</div>
   <h1>Our footprint</h1>
-  <p class="dek">Active across five major U.S. regions, from the Pacific Northwest to the Northeast corridor.</p>
+  <p class="dek">Active across five major U.S. regions, from the Pacific Northwest to the Northeast corridor. Click a region to explore our presence and investment thesis.</p>
+  <div class="page-meta">
+    <div class="page-meta-item">Regions<span>5 major U.S. regions</span></div>
+    <div class="page-meta-item">States<span>Nationwide coverage</span></div>
+    <div class="page-meta-item">Most Active<span>Sun Belt — South</span></div>
+  </div>
 </section>
 
-<section class="wrap"><div class="atlas">
-  <div>
+<div class="footprint-layout">
+  <aside class="footprint-sidebar reveal">
+    <div class="page-kicker">Coverage</div>
+    <h2>Five regions. One standard.</h2>
+    <p>We target supply-constrained markets with durable demand drivers — strong demographics, employment diversity, and household formation trends that support long-term residential value.</p>
     <div class="mkt-list" id="mktList"></div>
-  </div>
-  <div>
+  </aside>
+
+  <div class="reveal reveal-delay-1">
     <div class="map-stage">
-      <svg id="mapSvg" viewBox="0 0 880 520" preserveAspectRatio="xMidYMid meet" aria-label="US map with investment regions"></svg>
+      <svg id="mapSvg" viewBox="0 0 880 520" preserveAspectRatio="xMidYMid meet" aria-label="Interactive US map with investment regions"></svg>
     </div>
     <div class="map-cap">
-      <span>Interactive map</span>
-      <span>Click a region to explore</span>
+      <span>Interactive map — click a region</span>
+      <span>Five U.S. regions covered</span>
     </div>
     <div class="map-readout" id="readout"></div>
   </div>
-</div></section>
+</div>
 
-<footer><div class="wrap">
-<div class="foot-top">
-<div class="foot-brand"><a href="index.html" class="brand"><span class="mk"></span>WS Land</a><p>A private real estate investment firm operating across the United States.</p></div>
-<div class="foot-cols">
-<div class="foot-col"><h5>Pages</h5><a href="approach.html">Approach</a><a href="footprint.html">Footprint</a><a href="firm.html">The Firm</a><a href="contact.html">Get in touch</a></div>
-<div class="foot-col"><h5>Contact</h5><a href="mailto:wslandacquisitions@gmail.com">wslandacquisitions@gmail.com</a></div>
-<div class="foot-col"><h5>Coverage</h5><a href="footprint.html">West</a><a href="footprint.html">Mountain West</a><a href="footprint.html">Midwest</a><a href="footprint.html">South</a><a href="footprint.html">Northeast</a></div>
-</div></div>
-<div class="foot-bottom"><span>© <span id="yr"></span> WS Land LLC · Oregon Limited Liability Company</span><span>Informational only — not an offer to buy or sell securities or real estate</span></div>
+<section class="cta-section">
+  <h2 class="reveal">We invest where the fundamentals are strong.</h2>
+  <p class="reveal reveal-delay-1">Have a property in one of our target regions? Let's talk — we respond within 72 hours.</p>
+  <div class="cta-btns reveal reveal-delay-2">
+    <a href="contact.html" class="btn-primary">Start a conversation →</a>
+    <a href="approach.html" class="btn-outline">Our approach</a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-top">
+    <div class="foot-brand">
+      <a href="index.html" class="brand"><span class="mk"></span>WS Land</a>
+      <p>A private real estate investment firm operating across the United States.</p>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col">
+        <h5>Pages</h5>
+        <a href="approach.html">Approach</a>
+        <a href="footprint.html">Footprint</a>
+        <a href="firm.html">The Firm</a>
+        <a href="contact.html">Get in touch</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <a href="mailto:wslandacquisitions@gmail.com">wslandacquisitions@gmail.com</a>
+      </div>
+      <div class="foot-col">
+        <h5>Coverage</h5>
+        <a href="footprint.html">West</a>
+        <a href="footprint.html">Mountain West</a>
+        <a href="footprint.html">Midwest</a>
+        <a href="footprint.html">South</a>
+        <a href="footprint.html">Northeast</a>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© <span id="yr"></span> WS Land LLC · Oregon Limited Liability Company</span>
+    <span>Informational only — not an offer to buy or sell securities or real estate</span>
+  </div>
 </footer>
-<script src="assets/app.js"></script>
-</body></html>
+
+<script src="assets/app-v2.js"></script>
+</body>
+</html>
